@@ -24,7 +24,7 @@ const Home = () => {
           <div className='w-32 h-40 bg-zinc-800 mx-auto'>
 
           </div>
-          <h1>Find <span className="text-gradient">Movies</span> You'll Enjoy</h1>
+          <h1>Find <span className="text-gradient">Movies</span> You will Enjoy</h1>
           <Search searchInput={searchInput} setSearchInput={setSearchInput} />
         </header>
         
