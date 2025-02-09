@@ -2,14 +2,12 @@
 
 import Search from '@/shared/components/Search'
 import AllMovies from '@/shared/components/sections/AllMovies';
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image';
-import { fetchMovies } from '@/features/movie/fetchMovies';
 
 
 const Home = () => {
   const [searchInput, setSearchInput] = useState("");
-
 
   return (
     <main className='min-h-screen'>

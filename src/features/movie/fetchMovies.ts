@@ -6,11 +6,11 @@ export const fetchMovies = async (endpoint: string, page = 1) => {
   const { setMovies, setLoading, setError } = useMovieStore.getState();
 
   try {
-      setLoading(true);
-      const { data } = await tmdb.get<MoviesResponse>(`${endpoint}?page=${page}`);
-      setMovies(data.results, data.page, data.total_pages);
+    setLoading(true);
+    const { data } = await tmdb.get<MoviesResponse>(`${endpoint}?page=${page}`);
+    setMovies(data.results, data.page, data.total_pages);
   } catch (error) {
-      setError("Error fetching movies");
+    setError("Error fetching movies: " + error);
   }
 };
 
@@ -20,10 +20,10 @@ export const fetchMoreMovies = async (endpoint: string) => {
   if (page >= totalPages) return;
 
   try {
-      setLoading(true);
-      const { data } = await tmdb.get<MoviesResponse>(`${endpoint}?page=${page + 1}`);
-      addMovies(data.results, data.page);
+    setLoading(true);
+    const { data } = await tmdb.get<MoviesResponse>(`${endpoint}?page=${page + 1}`);
+    addMovies(data.results, data.page);
   } catch (error) {
-      setError("Error fetching more movies");
+    setError("Error fetching more movies: " + error);
   }
 };
