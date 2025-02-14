@@ -2,13 +2,11 @@
 
 import Search from '@/shared/components/Search'
 import AllMovies from '@/shared/components/sections/AllMovies';
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image';
 
 
 const Home = () => {
-  const [searchInput, setSearchInput] = useState("");
-
   return (
     <main className='min-h-screen'>
       <div className="pattern" />
@@ -25,7 +23,7 @@ const Home = () => {
 
           </div>
           <h1>Find <span className="text-gradient">Movies</span> You will Enjoy</h1>
-          <Search searchInput={searchInput} setSearchInput={setSearchInput} />
+          <Search  />
         </header>
         
         <AllMovies />

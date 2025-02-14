@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3c5f67c0-d383-4735-ae31-e996d6560cfa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/movie/MovieCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/movie/MovieCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/movie/store.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/movie/fetchMovies.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movie/fetchMovies.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/movies/[movie]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/movies/[movie]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/components/sections/AllMovies.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/components/sections/AllMovies.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/ui/MoviesList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/MoviesList.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "EraEKV"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/EraEKV/Movietime-2.0.git",
+    "accountId": "7ca746bb-bc57-469c-94cf-df53b833f31c"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2t1HQp2zFfCwjThhdMpdJmJfapu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "X:/VS/Projects/Movietime",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "X:\\VS\\Projects\\movietime\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.120" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3c5f67c0-d383-4735-ae31-e996d6560cfa" name="Changes" comment="" />
+      <created>1739512647437</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739512647437</updated>
+      <workItem from="1739512648884" duration="155000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

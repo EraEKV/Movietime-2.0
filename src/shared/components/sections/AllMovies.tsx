@@ -4,9 +4,9 @@ import React from 'react'
 const AllMovies = () => {
   return (
     <section className='all-movies'>
-        <h2 className='mt-5'>All Movies</h2>
+        <h2 className='mt-5'>Popular movies</h2>
         <div>
-            <MoviesList endpoint="/movie/popular?language=en-US&page=1" />
+          <MoviesList endpoint="/movie/popular" />
         </div>
     </section>
   )
