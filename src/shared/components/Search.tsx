@@ -1,23 +1,22 @@
-import React from 'react'
-import { Search } from 'lucide-react';
+import { Search } from "lucide-react";
+import { useSearch } from "@/features/search/useSearch";
 
-const SearchComponent = ({ searchInput, setSearchInput } : { searchInput: string; setSearchInput: React.Dispatch<React.SetStateAction<string>> }) => {
-
+const SearchComponent = () => {
+    const { query, setQuery } = useSearch();
 
     return (
-        <div className='search'>
+        <div className="search">
             <div>
                 <Search />
-
                 <input
                     type="text"
-                    placeholder='Search movie'
-                    value={searchInput}
-                    onChange={(e) => setSearchInput(e.target.value)}
+                    placeholder="Search movie"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
                 />
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default SearchComponent
+export default SearchComponent;

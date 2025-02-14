@@ -1,8 +1,8 @@
 import { create } from "zustand";
-import { Movie } from "./model";
+import { Movie, MovieShort } from "./model";
 
 interface MovieStore {
-    movies: Movie[];
+    movies: (Movie | MovieShort)[];
     page: number;
     totalPages: number;
     loading: boolean;
