@@ -17,7 +17,7 @@ export const AppSettingsProvider = ({ children }: { children: ReactNode }) => {
     const [appLanguage, setAppLanguage] = useLocalStorage("systemLanguage", "en-US");
 
     return (
-        <AppSettingsContext.Provider value={{ theme : "dark", setTheme, appLanguage : "en-US", setAppLanguage }}>
+        <AppSettingsContext.Provider value={{ theme : theme || "dark", setTheme, appLanguage : appLanguage || "en-US", setAppLanguage }}>
             {children}
         </AppSettingsContext.Provider>
     );
