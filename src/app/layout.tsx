@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { AppSettingsProvider, useAppSettings } from "@/app/providers/AppSettingsProvider";
+import { AppSettingsProvider } from "@/app/providers/AppSettingsProvider";
 // import Navbar from "@/widgets/Navbar";
 // import Footer from "@/widgets/Footer";
 

@@ -9,7 +9,11 @@ export const useSearch = () => {
     useDebounce(() => setDebouncedQuery(query), 700, [query]);
 
     useEffect(() => {
-        debouncedQuery ? fetchSearchMovies({query: debouncedQuery}) : fetchMovies({language: "ru-RU"});
+        if (debouncedQuery) {
+            fetchSearchMovies({ query: debouncedQuery });
+        } else {
+            fetchMovies({});
+        }
     }, [debouncedQuery]);
 
     return { query, setQuery };
