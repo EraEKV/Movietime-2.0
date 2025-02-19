@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { AppSettingsProvider } from "@/app/providers/AppSettingsProvider";
-// import Navbar from "@/widgets/Navbar";
+import { AppSettingsProvider } from "@/app/_providers/AppSettingsProvider";
+import Navbar from "@/widgets/Navbar";
 // import Footer from "@/widgets/Footer";
 
 export const metadata: Metadata = {
   title: "Movietime",
   description: "Movietime 2.0",
 };
-
-<link
-  rel="icon"
-  href="/icon?<generated>"
-  type="image/<generated>"
-  sizes="<generated>"
-/>
 
 export default function RootLayout({
   children,
@@ -23,9 +16,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+      <link
+          rel="icon"
+          href="/icon?<generated>"
+          type="image/<generated>"
+          sizes="<generated>"
+        />
+        <link
+          rel="apple-touch-icon"
+          href="/apple-icon?<generated>"
+          type="image/<generated>"
+          sizes="<generated>"
+        />
+      </head>
       <body>
         <AppSettingsProvider>
-        {/* <Navbar /> */}
+        <Navbar />
           {children}
         {/* <Footer /> */}
         </AppSettingsProvider>
