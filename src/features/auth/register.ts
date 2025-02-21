@@ -2,10 +2,9 @@
 
 import * as z from "zod";
 import { RegisterSchema } from "./schemas";
+import bcrypt from "bcryptjs";
 import { db } from "@/shared/api/db";
 import { getUserByEmail } from "@/entities/user/api/db";
-
-const bcrypt = require("bcryptjs");
 
 export const register = async (values: z.infer<typeof RegisterSchema>) => {
     const validatedFields = RegisterSchema.safeParse(values);
