@@ -3,8 +3,8 @@ import Credentials from "next-auth/providers/credentials";
 
 import { LoginSchema } from "./schemas";
 import { getUserByEmail } from "@/entities/user/api/db";
-import bcrypt from "bcryptjs";
 
+const bcrypt = require("bcryptjs");
 
 export default {
     providers: [
