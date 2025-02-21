@@ -14,9 +14,6 @@ const nextConfig: NextConfig = {
       },
     ]
   },
-  experimental: {
-    runtime: "nodejs",
-  },
   images: {
     remotePatterns: [
       {
