@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
 import { z } from "zod";
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { CardWrapper } from './CardWrapper';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -23,8 +23,14 @@ import { Button } from "@/shared/ui/button";
 import { FormError } from "./FormError";
 import { FormSuccess } from "./FormSuccess";
 import { login } from "@/features/auth/login";
+// import { useSearchParams } from "next/navigation";
 
 export const LoginForm = () => {
+    // const searchParams = useSearchParams();
+    // const urlError = searchParams.get("error") === "OAuthAccountNotLinked"
+    //     ? "Email already in use with different provider"
+    //     : "";
+
     const [error, setError] = useState<string | undefined>("");
     const [success, setSuccess] = useState<string | undefined>(""); 
     const [isPending, startTransition] = useTransition();
@@ -50,11 +56,21 @@ export const LoginForm = () => {
         });
     }
 
+    const [urlError, setUrlError] = useState("");
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const error = params.get("error") === "OAuthAccountNotLinked"
+            ? "Email already in use with different provider"
+            : "";
+        setUrlError(error);
+    }, []);
+
   return (
     <CardWrapper 
         headerLabel={'Welcome back!'} 
         backButtonLabel={'Dont have an account?'} 
-        backButtonHref={'/sign-up'}
+        backButtonHref={'/auth/sign-up'}
         showSocial
     >
         <Form {...form}>
@@ -103,8 +119,8 @@ export const LoginForm = () => {
                     >
                     </FormField>
                 </div>
-                <FormError message={error} />
-                <FormSuccess message={success} />
+                <FormError message={ error || urlError } />
+                <FormSuccess message={ success } />
                 <Button 
                     disabled={isPending} 
                     type="submit"

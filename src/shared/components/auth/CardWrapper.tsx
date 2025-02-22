@@ -8,8 +8,7 @@ import {
 } from "@/shared/ui/card"
 import { Header } from './Header';
 import { Social } from './Social';
-import { Button } from '@/shared/ui/button';
-import Link from 'next/link';
+import BackButton from './BackButton';
 
 interface CardWrapperProps {
     children: React.ReactNode;
@@ -40,11 +39,7 @@ export const CardWrapper = ({
             </CardFooter>
         )}
         <CardFooter>
-            <Button variant="link" className='font-normal w-full size-sm text-accent' asChild>
-                <Link href={backButtonHref}>
-                    {backButtonLabel}
-                </Link>
-            </Button>
+            <BackButton href={backButtonHref} label={backButtonLabel} />
         </CardFooter>
     </Card>
   )
