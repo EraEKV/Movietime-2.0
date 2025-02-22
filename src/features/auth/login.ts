@@ -34,5 +34,5 @@ export const login = async (values: z.infer<typeof LoginSchema>) => {
         throw error;
     }
 
-    return { success: "Already is right" };
+    return { success: "All things is right" };
 };

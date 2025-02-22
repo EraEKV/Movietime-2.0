@@ -3,8 +3,9 @@ export const publicRoutes = [
 ];
 
 export const authRoutes = [
-    "/sign-in",
-    "/sign-up",
+    "/auth/sign-in",
+    "/auth/sign-up",
+    "/auth/error",
 ];
 
 export const DEFAULT_LOGIN_REDIRECT = "/settings";

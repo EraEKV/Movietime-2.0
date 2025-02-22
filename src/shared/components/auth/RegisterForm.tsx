@@ -55,7 +55,7 @@ export const RegisterForm = () => {
     <CardWrapper 
         headerLabel={'Create an account!'} 
         backButtonLabel={'Already have an account?'} 
-        backButtonHref={'/sign-in'}
+        backButtonHref={'/auth/sign-in'}
         showSocial
     >
         <Form {...form}>
