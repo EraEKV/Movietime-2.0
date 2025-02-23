@@ -2,7 +2,7 @@ import NextAuth from "next-auth";
 import { PrismaAdapter } from "@auth/prisma-adapter"
 import { db } from "@/shared/api/db";
 import authConfig from "./auth.config";
-import { getUserById } from "@/entities/user/api/db";
+import { getUserById } from "@/entities/user/api/user";
 import { UserRole } from "@prisma/client";
  
 export const { handlers, auth, signIn, signOut } = NextAuth({
@@ -19,6 +19,18 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     }
   },
   callbacks: {
+    async signIn({ user, account }) {
+      console.log(user, account)
+      // Allow oauth without email verification
+      if(account?.provider !== "credentials") return true;
+
+      const existingUser = user.id ? await getUserById(user.id) : null;
+
+      // Prevent Signin without email verification
+      if(!existingUser?.emailVerified) return false;
+
+      return true;
+    },
     async session({ token, session }) {
       console.log({sessionToken: token})
       if(token.sub && session.user) {

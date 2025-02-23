@@ -23,14 +23,8 @@ import { Button } from "@/shared/ui/button";
 import { FormError } from "./FormError";
 import { FormSuccess } from "./FormSuccess";
 import { login } from "@/features/auth/login";
-// import { useSearchParams } from "next/navigation";
 
 export const LoginForm = () => {
-    // const searchParams = useSearchParams();
-    // const urlError = searchParams.get("error") === "OAuthAccountNotLinked"
-    //     ? "Email already in use with different provider"
-    //     : "";
-
     const [error, setError] = useState<string | undefined>("");
     const [success, setSuccess] = useState<string | undefined>(""); 
     const [isPending, startTransition] = useTransition();
